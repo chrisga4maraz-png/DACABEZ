@@ -1,44 +1,66 @@
-/* =====================================================
-   DACABEZ | RESPONSIVE DESIGN
-===================================================== */
+/* =========================================================
+   DACABEZ | DISEÑO RESPONSIVE
+========================================================= */
 
 /* PANTALLAS GRANDES */
 
 @media (min-width: 1500px) {
     :root {
-        --container: 1440px;
-    }
-
-    .hero-section {
-        min-height: 850px;
+        --container: 1320px;
     }
 
     .hero-title {
-        font-size: 120px;
+        font-size: 88px;
+    }
+
+    .hero-section {
+        min-height: 730px;
     }
 }
 
-/* NOTEBOOKS */
+/* NOTEBOOKS Y TABLETS GRANDES */
 
 @media (max-width: 1100px) {
-    section {
-        padding: 90px 0;
+    :root {
+        --header-height: 78px;
     }
 
     .navigation {
-        gap: 20px;
+        gap: 19px;
     }
 
     .nav-link {
-        font-size: 14px;
+        font-size: 12px;
     }
 
-    .footer-main {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+    .hero-section {
+        min-height: 640px;
+    }
+
+    .hero-title {
+        max-width: 760px;
+        font-size: clamp(54px, 7vw, 72px);
+    }
+
+    .section-spacing {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .featured-projects-grid,
+    .projects-catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .laboratory-preview-content {
+        gap: 35px;
+    }
+
+    .footer-main {
         gap: 40px;
     }
 }
@@ -46,12 +68,121 @@
 /* TABLETS */
 
 @media (max-width: 900px) {
+    .container {
+        width: calc(100% - 48px);
+    }
+
+    .navigation {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .nav-contact {
+        padding: 9px 12px;
+    }
+
+    .hero-section {
+        min-height: 600px;
+        padding-top: 85px;
+        padding-bottom: 100px;
+    }
+
+    .hero-container {
+        width: calc(100% - 48px);
+    }
+
+    .hero-title {
+        max-width: 680px;
+        font-size: clamp(50px, 8vw, 68px);
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        max-width: 590px;
+        font-size: 16px;
+    }
+
+    .hero-scroll-indicator {
+        right: 24px;
+        bottom: 24px;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+
+    .intro-title {
+        font-size: 43px;
+    }
+
+    .laboratory-preview-content {
+        grid-template-columns: 1fr;
+    }
+
+    .laboratory-art {
+        min-height: 260px;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-information {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-information-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-information-sidebar {
+        max-width: none;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1.2fr;
+    }
+}
+
+/* MÓVILES */
+
+@media (max-width: 680px) {
     :root {
-        --header-height: 76px;
+        --header-height: 72px;
     }
 
     .container {
-        width: calc(100% - 48px);
+        width: calc(100% - 38px);
+    }
+
+    .section-spacing {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    /* ENCABEZADO */
+
+    .brand-mark {
+        width: 39px;
+        height: 39px;
+        font-size: 18px;
+    }
+
+    .brand-name {
+        font-size: 16px;
+    }
+
+    .brand-subtitle {
+        font-size: 8px;
     }
 
     .menu-toggle {
@@ -60,102 +191,76 @@
     }
 
     .navigation {
-        position: fixed;
-        top: var(--header-height);
-        right: -100%;
-        width: min(400px, 100%);
-        height: calc(100dvh - var(--header-height));
-        padding: 45px 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 28px;
-        background: var(--black);
-        color: white;
-        transition: right 300ms ease;
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 20px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(16, 13, 43, .98);
+        box-shadow: 0 18px 30px rgba(0, 0, 0, .25);
     }
 
     .navigation.active {
-        right: 0;
+        display: flex;
+        flex-direction: column;
     }
 
-    .navigation .nav-link {
-        color: white;
-        font-size: 19px;
+    .nav-link {
+        padding: 13px 5px;
+        border-bottom: 1px solid rgba(189, 138, 255, .1);
+        font-size: 13px;
     }
 
-    .navigation .nav-link:hover {
-        color: var(--turquoise);
+    .nav-link::after {
+        display: none;
     }
+
+    .nav-contact {
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid rgba(0, 229, 212, .35);
+        text-align: center;
+    }
+
+    /* HERO */
 
     .hero-section {
-        min-height: auto;
-        padding: 110px 0;
+        min-height: 570px;
+        padding: 75px 0 100px;
+    }
+
+    .hero-container {
+        width: calc(100% - 38px);
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 20px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
     }
 
     .hero-title {
-        font-size: clamp(55px, 9vw, 82px);
-    }
-
-    .services-preview-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .laboratory-preview-content {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-preview-content {
-        padding: 50px;
-    }
-}
-
-/* CELULARES */
-
-@media (max-width: 680px) {
-    body {
-        font-size: 16px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-
-    .container {
-        width: calc(100% - 36px);
-    }
-
-    .brand-name {
-        font-size: 20px;
-    }
-
-    .brand-mark {
-        width: 42px;
-        height: 42px;
-        font-size: 22px;
-    }
-
-    .hero-section {
-        padding: 85px 0;
-    }
-
-    .hero-title {
-        font-size: clamp(46px, 12vw, 65px);
-        letter-spacing: -3px;
+        max-width: 100%;
+        font-size: clamp(43px, 11vw, 60px);
+        letter-spacing: -2.7px;
+        line-height: 1.02;
     }
 
     .hero-description {
-        margin-top: 25px;
-        font-size: 18px;
+        margin-top: 22px;
+        font-size: 15px;
+        line-height: 1.7;
     }
 
     .hero-actions {
-        flex-direction: column;
         align-items: stretch;
+        flex-direction: column;
+        max-width: 330px;
+        margin-top: 26px;
     }
 
     .hero-actions .button-primary,
@@ -163,130 +268,250 @@
         width: 100%;
     }
 
+    .hero-bottom-info {
+        font-size: 11px;
+    }
+
+    .hero-scroll-indicator {
+        right: 19px;
+        bottom: 20px;
+        font-size: 9px;
+    }
+
+    .scroll-line {
+        width: 28px;
+    }
+
+    /* SECCIONES */
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 28px;
+    }
+
     .section-title {
-        font-size: 42px;
-        letter-spacing: -2px;
+        font-size: 36px;
+        letter-spacing: -1.5px;
     }
 
-    .section-description {
-        font-size: 17px;
+    .intro-title {
+        font-size: 35px;
+        letter-spacing: -1.5px;
     }
 
-    .projects-hero {
-        padding: 85px 0 65px;
+    .intro-description p,
+    .intro-content > p {
+        font-size: 15px;
     }
 
-    .projects-page-title {
-        font-size: 48px;
-        letter-spacing: -2px;
-    }
+    /* TARJETAS */
 
-    .projects-page-description {
-        font-size: 18px;
-    }
-
-    .services-preview-grid {
+    .services-preview-grid,
+    .featured-projects-grid,
+    .projects-catalog-grid {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 14px;
     }
 
     .service-preview-card {
-        padding: 30px;
+        min-height: auto;
+        padding: 22px;
     }
 
-    .projects-catalog-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+    .service-icon {
+        margin: 16px 0 13px;
     }
 
     .project-card-content {
-        padding: 25px;
+        padding: 18px;
     }
 
-    .project-card-content h3 {
-        font-size: 25px;
+    .project-placeholder {
+        min-height: 155px;
     }
 
-    .projects-filters {
+    /* PÁGINAS INTERNAS */
+
+    .projects-hero {
+        padding-top: 75px;
+        padding-bottom: 40px;
+    }
+
+    .projects-page-title {
+        font-size: clamp(42px, 10vw, 58px);
+        letter-spacing: -2.5px;
+    }
+
+    .projects-page-description {
+        font-size: 15px;
+    }
+
+    .projects-hero-meta {
         gap: 9px;
     }
 
-    .project-filter {
-        padding: 10px 16px;
-        font-size: 13px;
+    .projects-filter-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
     }
+
+    .projects-filters {
+        gap: 7px;
+    }
+
+    .project-filter {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .project-detail-hero {
+        padding-top: 65px;
+    }
+
+    .project-detail-navigation {
+        flex-direction: column;
+    }
+
+    .project-detail-navigation > * {
+        width: 100%;
+    }
+
+    /* LABORATORIO */
+
+    .laboratory-preview-content {
+        gap: 28px;
+    }
+
+    .laboratory-art {
+        min-height: 230px;
+    }
+
+    .lab-orb {
+        width: 140px;
+        height: 140px;
+    }
+
+    .lab-orb-inner {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* CONTACTO */
 
     .contact-preview-content {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 38px 28px;
+        padding: 32px 24px;
+        border-radius: 17px;
     }
 
-    .contact-form {
-        padding: 26px;
+    .contact-preview-content h2 {
+        font-size: 37px;
+        letter-spacing: -1.5px;
     }
 
     .contact-information {
-        padding: 30px;
+        grid-template-columns: 1fr;
+        padding: 25px;
     }
 
+    .contact-form {
+        padding: 24px 20px;
+    }
+
+    .contact-form .button-primary {
+        width: 100%;
+    }
+
+    /* CIERRE */
+
     .projects-closing-content {
-        padding: 40px 28px;
+        padding: 32px 24px;
+    }
+
+    .projects-closing-content h2 {
+        font-size: 32px;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        padding-top: 50px;
     }
 
     .footer-main {
         grid-template-columns: 1fr;
-        gap: 38px;
+        gap: 35px;
+        padding-bottom: 38px;
+    }
+
+    .footer-links {
+        gap: 22px;
     }
 
     .footer-bottom {
-        flex-direction: column;
         align-items: flex-start;
-    }
-
-    .laboratory-art img {
-        height: 320px;
+        flex-direction: column;
+        gap: 8px;
     }
 }
 
-/* CELULARES PEQUEÑOS */
+/* MÓVILES PEQUEÑOS */
 
 @media (max-width: 420px) {
-    .container {
-        width: calc(100% - 28px);
+    .container,
+    .hero-container {
+        width: calc(100% - 32px);
+    }
+
+    .hero-section {
+        min-height: 550px;
     }
 
     .hero-title {
         font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .intro-title {
+        font-size: 31px;
     }
 
     .projects-page-title {
         font-size: 40px;
     }
 
-    .section-title {
-        font-size: 35px;
+    .contact-preview-content h2 {
+        font-size: 33px;
     }
 
-    .brand-subtitle {
-        font-size: 9px;
-    }
-
-    .button-primary,
-    .button-secondary {
-        padding: 13px 20px;
-        font-size: 14px;
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
 }
 
 /* MOVIMIENTO REDUCIDO */
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     *,
     *::before,
     *::after {
-        scroll-behavior: auto !important;
         animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
     }
 }
