@@ -7,11 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const filtersContainer = document.querySelector(".projects-filters");
     const projectCards = document.querySelectorAll(".catalog-project-card");
+    const catalogGrid = document.querySelector(".projects-catalog-grid");
+
+
+    // ========================================
+    // COMPROBAR ELEMENTOS NECESARIOS
+    // ========================================
 
     // Si no estamos en la página de proyectos,
     // no ejecutamos el sistema de filtros.
 
-    if (!filtersContainer || projectCards.length === 0) {
+    if (
+        !filtersContainer ||
+        !catalogGrid ||
+        projectCards.length === 0
+    ) {
         return;
     }
 
@@ -38,8 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // ========================================
 
     const filterLinks = filtersContainer.querySelectorAll(".project-filter");
-
-    const catalogGrid = document.querySelector(".projects-catalog-grid");
 
 
     // Mensaje de resultados.
@@ -102,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const url = new URL(link.href, window.location.origin);
 
-            const linkCategory = url.searchParams.get("categoria") || "todos";
+            const linkCategory =
+                url.searchParams.get("categoria") || "todos";
 
             const isActive = linkCategory === category;
 
@@ -127,7 +136,11 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
 
             resultsMessage.textContent =
-                `${visibleProjects} ${visibleProjects === 1 ? "proyecto encontrado" : "proyectos encontrados"}`;
+                `${visibleProjects} ${
+                    visibleProjects === 1
+                        ? "proyecto encontrado"
+                        : "proyectos encontrados"
+                }`;
 
         }
 
@@ -144,11 +157,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const url = new URL(link.href, window.location.origin);
 
-            const category = url.searchParams.get("categoria") || "todos";
+            const category =
+                url.searchParams.get("categoria") || "todos";
 
             // Evitar recargar la página.
 
             event.preventDefault();
+
 
             // Actualizar dirección del navegador.
 
@@ -190,7 +205,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const initialParams = new URLSearchParams(window.location.search);
 
-    const initialCategory = initialParams.get("categoria") || "todos";
+    const initialCategory =
+        initialParams.get("categoria") || "todos";
 
     const validCategories = [
         "todos",

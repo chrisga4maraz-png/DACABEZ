@@ -186,9 +186,10 @@
     }
 
     .menu-toggle {
-        display: grid;
-        place-items: center;
-    }
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
 
     .navigation {
         position: absolute;
@@ -441,10 +442,14 @@
     }
 
     .footer-main {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding-bottom: 38px;
-    }
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 34px;
+}
+
+.footer-contact {
+    grid-column: 1 / -1;
+    margin-top: 0;
+}
 
     .footer-links {
         gap: 22px;

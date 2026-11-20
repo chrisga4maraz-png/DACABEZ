@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         navigation.classList.add("active");
         menuToggle.classList.add("active");
         menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Cerrar menú");
+
         document.body.classList.add("menu-open");
     }
 
@@ -31,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
         navigation.classList.remove("active");
         menuToggle.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+
         document.body.classList.remove("menu-open");
     }
 
@@ -39,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         menuToggle.addEventListener("click", () => {
 
-            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            const isOpen =
+                menuToggle.getAttribute("aria-expanded") === "true";
 
             if (isOpen) {
                 closeMenu();
@@ -90,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.addEventListener("resize", () => {
 
-            if (window.innerWidth > 900) {
+            if (window.innerWidth > 680) {
                 closeMenu();
             }
 

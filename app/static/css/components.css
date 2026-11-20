@@ -440,9 +440,9 @@
     background: rgba(255, 92, 168, .8);
     color: #fff;
 }
-/* DACABEZ: secciones de proyectos reservadas para más adelante */
+/* Secciones de proyectos reservadas hasta definir el portfolio */
 
-.intro-section + .featured-section,
+.hero-section ~ .featured-section,
 .projects-filter-section,
 .projects-catalog-section,
 .projects-closing-section {
