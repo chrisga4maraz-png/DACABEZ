@@ -1,0 +1,292 @@
+/* =====================================================
+   DACABEZ | RESPONSIVE DESIGN
+===================================================== */
+
+/* PANTALLAS GRANDES */
+
+@media (min-width: 1500px) {
+    :root {
+        --container: 1440px;
+    }
+
+    .hero-section {
+        min-height: 850px;
+    }
+
+    .hero-title {
+        font-size: 120px;
+    }
+}
+
+/* NOTEBOOKS */
+
+@media (max-width: 1100px) {
+    section {
+        padding: 90px 0;
+    }
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .laboratory-preview-content {
+        gap: 40px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    :root {
+        --header-height: 76px;
+    }
+
+    .container {
+        width: calc(100% - 48px);
+    }
+
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+    }
+
+    .navigation {
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: min(400px, 100%);
+        height: calc(100dvh - var(--header-height));
+        padding: 45px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        background: var(--black);
+        color: white;
+        transition: right 300ms ease;
+    }
+
+    .navigation.active {
+        right: 0;
+    }
+
+    .navigation .nav-link {
+        color: white;
+        font-size: 19px;
+    }
+
+    .navigation .nav-link:hover {
+        color: var(--turquoise);
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 110px 0;
+    }
+
+    .hero-title {
+        font-size: clamp(55px, 9vw, 82px);
+    }
+
+    .services-preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .laboratory-preview-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-preview-content {
+        padding: 50px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 680px) {
+    body {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .hero-section {
+        padding: 85px 0;
+    }
+
+    .hero-title {
+        font-size: clamp(46px, 12vw, 65px);
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        margin-top: 25px;
+        font-size: 18px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .button-primary,
+    .hero-actions .button-secondary {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .section-description {
+        font-size: 17px;
+    }
+
+    .projects-hero {
+        padding: 85px 0 65px;
+    }
+
+    .projects-page-title {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .projects-page-description {
+        font-size: 18px;
+    }
+
+    .services-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-preview-card {
+        padding: 30px;
+    }
+
+    .projects-catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-card-content {
+        padding: 25px;
+    }
+
+    .project-card-content h3 {
+        font-size: 25px;
+    }
+
+    .projects-filters {
+        gap: 9px;
+    }
+
+    .project-filter {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .contact-preview-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 38px 28px;
+    }
+
+    .contact-form {
+        padding: 26px;
+    }
+
+    .contact-information {
+        padding: 30px;
+    }
+
+    .projects-closing-content {
+        padding: 40px 28px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .laboratory-art img {
+        height: 320px;
+    }
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 420px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .hero-title {
+        font-size: 43px;
+    }
+
+    .projects-page-title {
+        font-size: 40px;
+    }
+
+    .section-title {
+        font-size: 35px;
+    }
+
+    .brand-subtitle {
+        font-size: 9px;
+    }
+
+    .button-primary,
+    .button-secondary {
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+}
+
+/* MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

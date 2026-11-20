@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080B14">
+    <meta name="description" content="Contactá a DACABEZ para conversar sobre proyectos, servicios y colaboraciones.">
+    <title>Contacto | DACABEZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+
+        <a href="/" class="brand">
+            <span class="brand-mark">D<span>.</span></span>
+            <span class="brand-text">
+                <span class="brand-name">DACABEZ</span>
+                <span class="brand-subtitle">DIGITAL UNIVERSE</span>
+            </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navigation" id="navigation">
+            <a href="/" class="nav-link">Inicio</a>
+            <a href="/proyectos" class="nav-link">Proyectos</a>
+            <a href="/servicios" class="nav-link">Servicios</a>
+            <a href="/empresa" class="nav-link">Nosotros</a>
+            <a href="/laboratorio" class="nav-link">Laboratorio</a>
+            <a href="/contacto" class="nav-contact active">Contacto ↗</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="projects-hero container">
+
+        <span class="section-label">CONTACT / 01</span>
+
+        <h1 class="projects-page-title">
+            Toda gran idea<br>
+            comienza con una<br>
+            <span class="gradient-text">conversación.</span>
+        </h1>
+
+        <p class="projects-page-description">
+            Contanos qué tenés en mente.
+            Estamos abiertos a conocer nuevos proyectos,
+            propuestas y oportunidades de colaboración.
+        </p>
+
+    </section>
+
+
+    <section class="contact-form-section section-spacing">
+
+        <div class="container">
+
+            <div class="contact-layout">
+
+                <div class="contact-information">
+
+                    <span class="section-label">CONECTEMOS</span>
+
+                    <h2>
+                        Hagamos que las ideas
+                        encuentren su camino.
+                    </h2>
+
+                    <p>
+                        Si necesitás desarrollar un sitio web,
+                        tenés una propuesta o simplemente querés
+                        conocer más sobre DACABEZ, escribinos.
+                    </p>
+
+                    <div class="contact-information-item">
+                        <span>TIPO DE CONSULTAS</span>
+                        <p>Proyectos · Servicios · Colaboraciones</p>
+                    </div>
+
+                    <div class="contact-information-item">
+                        <span>UBICACIÓN</span>
+                        <p>Argentina</p>
+                    </div>
+
+                </div>
+
+
+                <form class="contact-form" action="/contacto" method="POST">
+
+                    <div class="form-group">
+
+                        <label for="nombre">Nombre</label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Correo electrónico</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Tu correo electrónico"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="asunto">Asunto</label>
+
+                        <input
+                            type="text"
+                            id="asunto"
+                            name="asunto"
+                            placeholder="¿Sobre qué querés conversar?"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="mensaje">Mensaje</label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            placeholder="Contanos sobre tu idea o proyecto..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="button-primary">
+                        Enviar mensaje ↗
+                    </button>
+
+                    <p class="form-disclaimer">
+                        El envío del formulario se habilitará
+                        cuando configuremos el sistema de recepción
+                        de mensajes.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="contact-preview-section section-spacing">
+
+        <div class="container">
+
+            <div class="contact-preview-content">
+
+                <span class="section-label">DACABEZ DIGITAL UNIVERSE</span>
+
+                <h2>
+                    Las posibilidades
+                    <span class="gradient-text">no terminan acá.</span>
+                </h2>
+
+                <p>
+                    Explorá nuestros proyectos y conocé
+                    el universo que estamos construyendo.
+                </p>
+
+                <a href="/proyectos" class="button-primary">
+                    Explorar proyectos ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-content">
+
+        <div class="footer-main">
+
+            <div class="footer-brand-section">
+                <a href="/" class="brand footer-brand">
+                    <span class="brand-mark">D<span>.</span></span>
+                    <span class="brand-text">
+                        <span class="brand-name">DACABEZ</span>
+                        <span class="brand-subtitle">DIGITAL UNIVERSE</span>
+                    </span>
+                </a>
+
+                <p class="footer-description">
+                    Tecnología, creatividad e ideas que encuentran
+                    su forma en el mundo digital.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h2>Explorar</h2>
+                    <a href="/">Inicio</a>
+                    <a href="/proyectos">Proyectos</a>
+                    <a href="/laboratorio">Laboratorio</a>
+                </div>
+
+                <div class="footer-column">
+                    <h2>DACABEZ</h2>
+                    <a href="/servicios">Servicios</a>
+                    <a href="/empresa">Nosotros</a>
+                    <a href="/contacto">Contacto</a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <span class="footer-label">¿UNA IDEA EN MENTE?</span>
+                <a href="/contacto" class="footer-big-link">Hablemos ↗</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 DACABEZ. Todos los derechos reservados.</p>
+            <p class="footer-bottom-note">Construyendo posibilidades digitales.</p>
+        </div>
+
+    </div>
+</footer>
+
+<script src="/static/js/main.js" defer></script>
+<script src="/static/js/animations.js" defer></script>
+
+</body>
+</html>
